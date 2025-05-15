@@ -1,0 +1,328 @@
+
+    <!-- Navbar -->
+    <%= render 'shared/navbar' %>
+
+
+
+
+
+    
+    <!-- Collection Page -->
+    <section class="collection" id="collection-page">
+        <!-- Sedans -->
+        <div class="collection-category">
+            <h1>Sedans</h1>
+            <hr />
+            <div class="collection-container">
+                <% # Car # 1 %>
+                <div class="collection-car-item" id="collection-car-item-page">
+                    <%= image_tag 'img/cars/car-2-enlarge.png', alt: 'img', id: 'collection-page-img' %>
+                    <div class="car-info-container">
+                        <div class="car-info">
+                            <div class="car-price">
+                                <h5>$60.00</h5>
+                                <h6>/Day</h6>
+                            </div>
+
+                            <div class="car-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h6>Los Angeles</h6>
+                            </div>
+                        </div>
+
+                        <h2>BMW 428i - F32</h2>
+                        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+                            <span>Book now</span>
+                            <i class="fa-solid fa-phone"></i>
+                          <% end %>
+                          
+                    </div>
+                </div>
+
+                <% # Car # 2 %>
+                <div class="collection-car-item" id="collection-car-item-page">
+                    <%= image_tag 'img/cars/car-8.png', alt: 'img', id: 'collection-page-img' %>
+                    <div class="car-info-container">
+                        <div class="car-info">
+                            <div class="car-price">
+                                <h5>$50.00</h5>
+                                <h6>/Day</h6>
+                            </div>
+
+                            <div class="car-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h6>Los Angeles</h6>
+                            </div>
+                        </div>
+
+                        <h2>Audi A8</h2>
+                        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+                            <span>Book now</span>
+                            <i class="fa-solid fa-phone"></i>
+                        <% end %>
+                    </div>
+                </div>
+
+                <% # Car # 3 %>
+                <div class="collection-car-item" id="collection-car-item-page">
+                    <%= image_tag 'img/cars/car-7.png', alt: 'img', id: 'collection-page-img' %>
+                    <div class="car-info-container">
+                        <div class="car-info">
+                            <div class="car-price">
+                                <h5>$50.00</h5>
+                                <h6>/Day</h6>
+                            </div>
+
+                            <div class="car-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h6>Los Angeles</h6>
+                            </div>
+                        </div>
+
+                        <h2>Audi A9</h2>
+                        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+                            <span>Book now</span>
+                            <i class="fa-solid fa-phone"></i>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%# Sports Car %>
+        <div class="collection-category">
+            <h1>Sports Car</h1>
+            <hr />
+            <div class="collection-container">
+                <%# Car # 1 %>
+                <div class="collection-car-item" id="collection-car-item-page">
+                    <%= image_tag 'img/cars/car-1-enlarge.png', alt: 'img', id: 'collection-page-img' %>
+                    <div class="car-info-container">
+                        <div class="car-info">
+                            <div class="car-price">
+                                <h5>$80.00</h5>
+                                <h6>/Day</h6>
+                            </div>
+
+                            <div class="car-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h6>California</h6>
+                            </div>
+                        </div>
+
+                        <h2>Mercedes-AMG GT R</h2>
+                        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+                            <span>Book now</span>
+                            <i class="fa-solid fa-phone"></i>
+                        <% end %>
+                    </div>
+                </div>
+
+                <%# Car # 2 %>
+                <div class="collection-car-item" id="collection-car-item-page">
+                    <%= image_tag 'img/cars/car-6.png', alt: 'img', id: 'collection-page-img' %>
+                    <div class="car-info-container">
+                        <div class="car-info">
+                            <div class="car-price">
+                                <h5>$100.00</h5>
+                                <h6>/Day</h6>
+                            </div>
+
+                            <div class="car-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h6>New Jersey</h6>
+                            </div>
+                        </div>
+
+                        <h2>Lamborghini Venemo</h2>
+                        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+                            <span>Book now</span>
+                            <i class="fa-solid fa-phone"></i>
+                        <% end %>
+                    </div>
+                </div>
+
+                <%# Car # 3 %>
+                <div class="collection-car-item" id="collection-car-item-page">
+                    <%= image_tag 'img/cars/car-9.png', alt: 'img', id: 'collection-page-img' %>
+                    <div class="car-info-container">
+                        <div class="car-info">
+                            <div class="car-price">
+                                <h5>$100.00</h5>
+                                <h6>/Day</h6>
+                            </div>
+
+                            <div class="car-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <h6>Los Angeles</h6>
+                            </div>
+                        </div>
+
+                        <h2>Shelby Mustang</h2>
+                        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+                            <span>Book now</span>
+                            <i class="fa-solid fa-phone"></i>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other car categories go here -->
+
+        <div class="collection-category">
+  <h1>SUVs</h1>
+  <hr />
+  <div class="collection-container">
+
+    <!-- Car #1 -->
+    <div class="collection-car-item" id="collection-car-item-page">
+      <%= image_tag "img/cars/car-10.png", alt: "Land Range Rover", id: "collection-page-img" %>
+      <div class="car-info-container">
+        <div class="car-info">
+          <div class="car-price">
+            <h5>$60.00</h5>
+            <h6>/Day</h6>
+          </div>
+          <div class="car-location">
+            <i class="fa-solid fa-location-dot"></i>
+            <h6>California</h6>
+          </div>
+        </div>
+        <h2>Land Range Rover</h2>
+        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+          <span>Book now</span>
+          <i class="fa-solid fa-phone"></i>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Car #2 -->
+    <div class="collection-car-item" id="collection-car-item-page">
+      <%= image_tag "img/cars/car-11.png", alt: "Lamborghini Urus", id: "collection-page-img" %>
+      <div class="car-info-container">
+        <div class="car-info">
+          <div class="car-price">
+            <h5>$70.00</h5>
+            <h6>/Day</h6>
+          </div>
+          <div class="car-location">
+            <i class="fa-solid fa-location-dot"></i>
+            <h6>New Jersey</h6>
+          </div>
+        </div>
+        <h2>Lamborghini Urus</h2>
+        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+          <span>Book now</span>
+          <i class="fa-solid fa-phone"></i>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Car #3 -->
+    <div class="collection-car-item" id="collection-car-item-page">
+      <%= image_tag "img/cars/car-12.png", alt: "Mercedes Benz GLE", id: "collection-page-img" %>
+      <div class="car-info-container">
+        <div class="car-info">
+          <div class="car-price">
+            <h5>$100.00</h5>
+            <h6>/Day</h6>
+          </div>
+          <div class="car-location">
+            <i class="fa-solid fa-location-dot"></i>
+            <h6>Los Angeles</h6>
+          </div>
+        </div>
+        <h2>Mercedes Benz GLE</h2>
+        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+          <span>Book now</span>
+          <i class="fa-solid fa-phone"></i>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="collection-category">
+  <h1>Coupes</h1>
+  <hr />
+  <div class="collection-container">
+
+    <!-- Car #1 -->
+    <div class="collection-car-item" id="collection-car-item-page">
+      <%= image_tag "img/cars/car-5-enlarge.png", alt: "Rolls Royce Dawn", id: "collection-page-img" %>
+      <div class="car-info-container">
+        <div class="car-info">
+          <div class="car-price">
+            <h5>$60.00</h5>
+            <h6>/Day</h6>
+          </div>
+          <div class="car-location">
+            <i class="fa-solid fa-location-dot"></i>
+            <h6>California</h6>
+          </div>
+        </div>
+        <h2>Rolls Royce Dawn</h2>
+        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+          <span>Book now</span>
+          <i class="fa-solid fa-phone"></i>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Car #2 -->
+    <div class="collection-car-item" id="collection-car-item-page">
+      <%= image_tag "img/cars/car-3-enlarge.png", alt: "Toyota 86", id: "collection-page-img" %>
+      <div class="car-info-container">
+        <div class="car-info">
+          <div class="car-price">
+            <h5>$70.00</h5>
+            <h6>/Day</h6>
+          </div>
+          <div class="car-location">
+            <i class="fa-solid fa-location-dot"></i>
+            <h6>New Jersey</h6>
+          </div>
+        </div>
+        <h2>Toyota 86 - Coupe</h2>
+        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+          <span>Book now</span>
+          <i class="fa-solid fa-phone"></i>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Car #3 -->
+    <div class="collection-car-item" id="collection-car-item-page">
+      <%= image_tag "img/cars/car-13.png", alt: "Audi A5", id: "collection-page-img" %>
+      <div class="car-info-container">
+        <div class="car-info">
+          <div class="car-price">
+            <h5>$100.00</h5>
+            <h6>/Day</h6>
+          </div>
+          <div class="car-location">
+            <i class="fa-solid fa-location-dot"></i>
+            <h6>Los Angeles</h6>
+          </div>
+        </div>
+        <h2>Audi A5</h2>
+        <%= link_to contact_path, class: 'btn-2 btn-car btn-collection-page' do %>
+          <span>Book now</span>
+          <i class="fa-solid fa-phone"></i>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </section>
+
+    <!-- Footer Section -->
+    <%= render 'shared/footer' %>
+
+
+

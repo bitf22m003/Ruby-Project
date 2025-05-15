@@ -1,0 +1,32 @@
+<!-- app/views/shared/_navbar.html.erb -->
+<nav>
+  <%= link_to root_path, class: 'brand' do %>
+    <h1>Metro<b class="accent">Ride</b></h1>
+  <% end %>
+
+  <div class="menu">
+  <div class="btnn">
+  <i class="fas fa-times close-btn"></i>
+</div>
+    <%= link_to 'HOME', root_path %>
+    <%= link_to 'CARS', collection_path %>
+    <%= link_to 'ABOUT', root_path(anchor: 'about') %>
+    <%= link_to 'REVIEWS', root_path(anchor: 'review') %>
+  </div>
+
+ 
+ 
+
+  <div class="auth">
+    
+      <%= link_to 'Sign In', new_user_session_path, class:'login' %>
+     
+      <%= link_to 'Sign up', new_user_registration_path %>
+        
+    
+  </div>
+
+  <div class="btnn">
+    <i class="fas fa-bars menu-btn"></i>
+  </div>
+</nav>

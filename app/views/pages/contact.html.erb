@@ -1,0 +1,50 @@
+<!-- Navbar -->
+<%= render 'shared/navbar' %>
+
+<!-- Contact Section -->
+<section class="contact">
+  <h1>Get in Touch for Your Dream Ride!</h1>
+  <p>
+    Have questions or need assistance? Our team is here to help you find the perfect
+    car for your adventure.
+  </p>
+  <form action="/" method="POST">
+    <!-- Replace With Access Key -->
+    <div class="car-select">
+      <div class="car-select-item">
+        <label for="location">Location:</label>
+        <select name="location" class="car-select-input" id="location">
+          <option value="California">California</option>
+          <option value="Los Angeles">Los Angeles</option>
+          <option value="New Jersey">New Jersey</option>
+          <option value="New York">New York</option>
+        </select>
+      </div>
+
+      <div class="car-select-item">
+        <label for="car-type">Car to Rent:</label>
+        <select name="car-type" class="car-select-input" id="car-type">
+          <option value="Mercedes-AMG GT R">Mercedes-AMG GT R</option>
+          <option value="Lamborghini Venemo">Lamborghini Venemo</option>
+          <option value="Rolls Royce">Rolls Royce</option>
+          <option value="Toyota 86 - Coupe">Toyota 86 - Coupe</option>
+        </select>
+      </div>
+
+      <div class="car-select-item">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" class="car-select-input"/>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <input type="text" name="name" placeholder="Enter Name " required/>
+      <input type="email" name="email" placeholder="Enter Email " required/>
+      <input type="phone" name="phone" placeholder="Enter Phone Number" required/>
+      <button type="submit" class="btn-2">Submit</button>
+    </div>
+  </form>
+</section>
+
+<!-- Footer -->
+<%= render 'shared/footer' %>
