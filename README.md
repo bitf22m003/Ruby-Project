@@ -20,12 +20,19 @@ The Car Rental System is a web-based application designed to streamline the proc
 - Home Page  
 - Car Collection Page  
 - Customer Reviews Page  
-- Booking Form  
+- Booking Form
+- Dashboard — Personalized view for logged-in users  
 
-#### 🔐 User Authentication
+#### 🔐 User Authentication with Devise gem
 - Login Functionality  
 - Sign Up / Registration System  
 
+## 🗄️ Database Setup
+The database is configured to store and manage application data efficiently.  
+
+### 📦 Contains:
+- **Users Data**  
+  - User credentials (ID, email, password) 
 ---
 
 ### ⏳ Pending Tasks
