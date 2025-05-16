@@ -27,7 +27,7 @@ The Car Rental System is a web-based application designed to streamline the proc
 - Login Functionality  
 - Sign Up / Registration System  
 
-## 🗄️ Database Setup
+#### 🗄️ Database Setup
 The database is configured to store and manage application data efficiently.  
 
 ### 📦 Contains:
