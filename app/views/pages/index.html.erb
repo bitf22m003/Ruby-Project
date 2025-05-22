@@ -6,7 +6,7 @@
     <div class="hero-headlines">
       <h1>Easy And Fast Way To <b class="accent">Rent</b> A Car with MetroRide.</h1>
       <p>We offer a wide extend of rental cars to suit your needs. Whether you are arranging a weekend travel or a business trip.</p>
-      <button class="btn-2 btn-hero" onclick="window.location.href='<%= contact_path %>'">Get Started</button>
+      <button class="btn-2 btn-hero">Get Started</button>
       <div class="download-buttons">
         <%= image_tag 'img/app_store_img.png', alt: 'App Store' %>
         <%= image_tag 'img/google_play_img.png', alt: 'Google Play' %>
@@ -48,12 +48,12 @@
     <h1>Our Car Collections</h1>
     <div class="collection-container">
       <% cars = [
-        { image: 'cars/car-1.png', price: '$80.00', location: 'California', name: 'Mercedes-AMG GT R' },
-        { image: 'cars/car-2.png', price: '$60.00', location: 'Los Angeles', name: 'BMW 428i - F32' },
-        { image: 'cars/car-3.png', price: '$40.00', location: 'California', name: 'Toyota 86 - Coupe' },
-        { image: 'cars/car-4.png', price: '$40.00', location: 'New York', name: '2018 Lexus' },
-        { image: 'cars/car-5.png', price: '$100.00', location: 'Las Vegas', name: 'Rolls Royce Dawn' },
-        { image: 'cars/car-6.png', price: '$100.00', location: 'New Jersey', name: 'Lamborghini Venemo' }
+        { image: 'cars/car-1.png', price: 'Rs.2000.00', location: 'California', name: 'Mercedes-AMG GT R' },
+        { image: 'cars/car-2.png', price: 'Rs.2000.00', location: 'Los Angeles', name: 'BMW 428i - F32' },
+        { image: 'cars/car-3.png', price: 'Rs.2000.00', location: 'California', name: 'Toyota 86 - Coupe' },
+        { image: 'cars/car-4.png', price: 'Rs.2000.00', location: 'New York', name: '2018 Lexus' },
+        { image: 'cars/car-5.png', price: 'Rs.2000.00', location: 'Las Vegas', name: 'Rolls Royce Dawn' },
+        { image: 'cars/car-6.png', price: 'Rs.2000.00', location: 'New Jersey', name: 'Lamborghini Venemo' }
       ] %>
 
       <% cars.each do |car| %>
@@ -81,7 +81,7 @@
       <% end %>
     </div>
 
-    <button class="btn-car btn-herocar" onclick="window.location.href='<%= collection_path %>'">
+    <button class="btn-car btn-herocar" onclick="window.location.href='<%= cars_path %>'">
       <span>Check Our Cars</span>
       <i class="fa-solid fa-arrow-right-long"></i>
     </button>

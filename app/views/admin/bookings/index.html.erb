@@ -1,0 +1,35 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div class="flex-grow-1 text-center">
+    <h2 class="mb-4 mt-4">All Bookings</h2>
+  </div>
+  <div class="me-4">
+    <%= link_to "Go to Dashboard", admin_dashboard_path, class: "btn btn-outline-primary" %>
+  </div>
+</div>
+
+<table class="table table-striped text-center">
+  <thead>
+    <tr>
+      <th>User Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Car</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Total Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.user.name %></td>
+        <td><%= booking.user.email %></td>
+        <td><%= booking.user.phone %></td>
+        <td><%= booking.car.name %></td>
+        <td><%= booking.start_date.strftime('%d-%m-%Y') %></td>
+        <td><%= booking.end_date.strftime('%d-%m-%Y') %></td>
+        <td><%= number_to_currency(booking.price, unit: "Rs. ") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,85 @@
+ <!-- Navbar -->
+    <%= render 'shared/navbar' %>
+
+<h2 class="text-center mb-5 my-4 pt-5 mt-5">Book <%= @car.name %> (<%= @car.brand %>)</h2>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow p-4">
+        <%= form_with(model: [@car, @booking], local: true) do |form| %>
+          
+          <div class="mb-3">
+            <%= form.label :start_date, class: "form-label" %>
+            <%= form.date_field :start_date, class: "form-control", id: 'start-date' %>
+          </div>
+
+          <div class="mb-3">
+            <%= form.label :end_date, class: "form-label" %>
+            <%= form.date_field :end_date, class: "form-control", id: 'end-date' %>
+          </div>
+
+          <div class="mb-3">
+            <%= form.label :pickup_location, class: "form-label" %>
+            <%= form.text_field :pickup_location, placeholder: "Enter pickup location", class: "form-control" %>
+          </div>
+
+          <div class="mb-3">
+            <%= form.label :dropoff_location, class: "form-label" %>
+            <%= form.text_field :dropoff_location, placeholder: "Enter dropoff location", class: "form-control" %>
+          </div>
+
+          <div class="mb-3">
+            <%= form.label :price, class: "form-label" %>
+            <%= form.number_field :price, id: 'total-price', readonly: true, class: "form-control" %>
+          </div>
+
+          <div class="d-flex justify-content-between gap-3 mt-3">
+            <%= form.submit "Confirm Booking", class: "btn btn-primary btn-lg w-40" %>
+            <%= link_to "Cancel", cars_path, class: "btn btn-outline-secondary btn-lg w-30" %>
+          </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<input type="hidden" id="price-per-day" value="<%= @car.price %>">
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const startDateField = document.getElementById("start-date");
+    const endDateField = document.getElementById("end-date");
+    const pricePerDayField = document.getElementById("price-per-day");
+    const totalPriceField = document.getElementById("total-price");
+
+    if (!startDateField || !endDateField || !pricePerDayField || !totalPriceField) {
+      console.error("Missing required fields");
+      return;
+    }
+
+    const pricePerDay = parseFloat(pricePerDayField.value) || 0;
+
+    function updatePrice() {
+      const start = new Date(startDateField.value);
+      const end = new Date(endDateField.value);
+
+      if (start && end && end > start) {
+        const days = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+        const total = days * pricePerDay;
+        totalPriceField.value = total.toFixed(2);
+      } else {
+        totalPriceField.value = '';
+      }
+    }
+
+    startDateField.addEventListener("change", updatePrice);
+    endDateField.addEventListener("change", updatePrice);
+    updatePrice(); // trigger once on load
+  });
+</script>
+
+<!-- Footer -->
+<%= render 'shared/footer' %>

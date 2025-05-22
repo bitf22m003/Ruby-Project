@@ -1,0 +1,38 @@
+
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div class="flex-grow-1 text-center">
+    <h2 class="mb-4 mt-4">Manage Cars</h2>
+  </div>
+  <div class="me-4">
+    <%= link_to "Go to Dashboard", admin_dashboard_path, class: "btn btn-outline-primary" %>
+  </div>
+</div>
+
+<table class="table table-striped text-center">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Model Year</th>
+      <th>Price</th>
+      <th>Availability</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><%= car.name %></td>
+        <td><%= car.brand %></td>
+        <td><%= car.model_year %></td>
+        <td><%= car.price %></td>
+        <td><%= car.availability ? 'Yes' : 'No' %></td>
+        <td>
+          <%= link_to 'Edit', edit_admin_car_path(car), class: 'btn btn-sm btn-primary' %>
+          <%= link_to 'Delete', admin_car_path(car), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

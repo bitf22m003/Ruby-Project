@@ -16,7 +16,20 @@ Rails.application.routes.draw do
   get "contact", to: "pages#contact"
   resources :users, only: [:new, :create]
   get 'login', to: 'sessions#new'
+
+  #resources :cars, only: [:index, :show]  #  for users
   
+  resources :cars, only: [:index, :show] do
+  resources :bookings, only: [:new, :create]
+end
+
+  
+  namespace :admin do
+  get 'dashboard', to: 'dashboard#index', as: 'dashboard'
+  resources :cars, except: [:show]
+  get 'view_all_cars', to: 'cars#view_all'
+  resources :bookings, only: [:index]
+end
 
   
 
