@@ -16,31 +16,41 @@ The Car Rental System is a web-based application designed to streamline the proc
 
 ### ✅ Completed Tasks
 
-#### 🎨 Frontend Development
+#### 🎨 Frontend Development with Backened Integraion
 - Home Page  
 - Car Collection Page  
 - Customer Reviews Page  
 - Booking Form
-- Dashboard — Personalized view for logged-in users  
+- Dashboard — Personalized view for logged-in users and Admin
+- #### 🛠️ Admin Panel
+- Admin dashboard that shows statistics i.e Total Cars, Total Bookings , Monthly Revenue 
+- Add, Update, and Delete Cars Features 
+- View All Cars  
+- View All Bookings
+  
+#### 🔍 Search Functionality
+- Search cars from the available car list
+
+ ---
 
 #### 🔐 User Authentication with Devise gem
 - Login Functionality  
-- Sign Up / Registration System  
+- Sign Up / Registration System
+- Logout Functionality
+
+ ---
 
 #### 🗄️ Database Setup
 The database is configured to store and manage application data efficiently.  
 
 ### 📦 Contains:
 - **Users Data**  
-  - User credentials (ID, email, password) 
----
+  - User credentials (ID, Email, Password,PhoneNumber, Address) 
+- **Cars Data**  
+  - Cars Info (ID, Name, Brand, Model_Year, Price per Day)
+- **Bookings Data**  
+  - Booking Info (ID, Start Date, End Date, Pickup Location, Dropoff Location, Total rent price)
 
-### ⏳ Pending Tasks
 
-#### 🛠️ Admin Panel
-- Add, Update, and Delete Cars  
-- View All Cars  
-- View All Bookings  
 
-#### 🔍 Search Functionality
-- Search cars from the available car list  
+  
