@@ -1,16 +1,14 @@
 class Admin::CarsController < ApplicationController
   before_action :authenticate_user!
   before_action :require_admin
-
   before_action :set_car, only: [:edit, :update, :destroy]
 
   def index
-    if params[:search].present?
-    @cars = Car.where("name ILIKE ? OR brand ILIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
-  else
+    
     @cars = Car.all
+  
   end
-  end
+
 
   def new
     @car = Car.new
@@ -40,7 +38,15 @@ def update
 end
 
 def view_all
-  @cars = Car.all
+  if params[:search].present?
+    @cars = Car.where("name ILIKE ? OR brand ILIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
+  else
+    @cars = Car.all
+  end
+end
+
+def show
+    @car = Car.find(params[:id])
 end
 
 

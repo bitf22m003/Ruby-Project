@@ -21,12 +21,12 @@
 
           <div class="mb-3">
             <%= form.label :pickup_location, class: "form-label" %>
-            <%= form.text_field :pickup_location, placeholder: "Enter pickup location", class: "form-control" %>
+            <%= form.text_field :pickup_location, placeholder: "Enter pickup location", class: "form-control", required: true, minlength: 3  %>
           </div>
 
           <div class="mb-3">
             <%= form.label :dropoff_location, class: "form-label" %>
-            <%= form.text_field :dropoff_location, placeholder: "Enter dropoff location", class: "form-control" %>
+            <%= form.text_field :dropoff_location, placeholder: "Enter dropoff location", class: "form-control", required: true, minlength: 3 %>
           </div>
 
           <div class="mb-3">

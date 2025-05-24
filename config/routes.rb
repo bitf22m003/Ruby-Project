@@ -26,7 +26,7 @@ end
   
   namespace :admin do
   get 'dashboard', to: 'dashboard#index', as: 'dashboard'
-  resources :cars, except: [:show]
+  resources :cars
   get 'view_all_cars', to: 'cars#view_all'
   resources :bookings, only: [:index]
 end

@@ -9,42 +9,53 @@
 </div>
 
   <div class="card shadow p-4" style="max-width: 600px; margin: 0 auto;">
-    <%= form_with model: [:admin, @car], local: true do |form| %>
-      <div class="mb-3">
-        <%= form.label :name, class: "form-label" %>
-        <%= form.text_field :name, class: "form-control" %>
-      </div>
+  <% if @car.errors.any? %>
+    <div class="alert alert-danger">
+      <h4>There were some errors:</h4>
+      <ul>
+        <% @car.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-      <div class="mb-3">
-        <%= form.label :brand, class: "form-label" %>
-        <%= form.text_field :brand, class: "form-control" %>
-      </div>
+  <%= form_with model: [:admin, @car], local: true, html: { multipart: true } do |form| %>
+    <div class="mb-3">
+      <%= form.label :name, class: "form-label" %>
+      <%= form.text_field :name, class: "form-control", required: true, placeholder: "Enter car name", pattern: "[A-Za-z0-9 ]+" %>
+    </div>
 
-      <div class="mb-3">
-        <%= form.label :model_year, class: "form-label" %>
-        <%= form.number_field :model_year, class: "form-control" %>
-      </div>
+    <div class="mb-3">
+      <%= form.label :brand, class: "form-label" %>
+      <%= form.text_field :brand, class: "form-control", required: true, placeholder: "Enter brand name", pattern: "[A-Za-z ]+" %>
+    </div>
 
-      <div class="mb-3">
-        <%= form.label :price, class: "form-label" %>
-        <%= form.number_field :price, step: 0.01, class: "form-control" %>
-      </div>
+    <div class="mb-3">
+      <%= form.label :model_year, class: "form-label" %>
+      <%= form.number_field :model_year, class: "form-control", required: true, min: 1990, max: Date.current.year  %>
+    </div>
 
-      <div class="form-check mb-3">
-        <%= form.check_box :availability, class: "form-check-input" %>
-        <%= form.label :availability, class: "form-check-label" %>
-      </div>
+    <div class="mb-3">
+      <%= form.label :price, class: "form-label" %>
+      <%= form.number_field :price, step: 0.01, class: "form-control", required: true, min: 1 %>
+    </div>
 
-      <div class="mb-4">
-        <%= form.label :image, "Car Image", class: "form-label" %>
-        <%= form.file_field :image, class: "form-control" %>
-      </div>
+    <div class="form-check mb-3">
+      <%= form.check_box :availability, class: "form-check-input" %>
+      <%= form.label :availability, class: "form-check-label" %>
+    </div>
 
-      <div class="d-flex justify-content-between">
-        
-        <%= form.submit "Update Car", class: "btn btn-primary" %>
-        <%= link_to "Cancel", admin_cars_path, class: "btn btn-secondary" %>
-      </div>
-    <% end %>
-  </div>
+    <div class="mb-4">
+      <%= form.label :image, "Car Image", class: "form-label" %>
+      <%= form.file_field :image, class: "form-control" %>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <%= form.submit "Update Car", class: "btn btn-primary" %>
+      <%= link_to "Cancel", admin_cars_path, class: "btn btn-secondary" %>
+    </div>
+  <% end %>
+</div>
+
 </div>
