@@ -48,12 +48,12 @@
     <h1>Our Car Collections</h1>
     <div class="collection-container">
       <% cars = [
-        { image: 'cars/car-1.png', price: 'Rs.2000.00', location: 'California', name: 'Mercedes-AMG GT R' },
-        { image: 'cars/car-2.png', price: 'Rs.2000.00', location: 'Los Angeles', name: 'BMW 428i - F32' },
-        { image: 'cars/car-3.png', price: 'Rs.2000.00', location: 'California', name: 'Toyota 86 - Coupe' },
-        { image: 'cars/car-4.png', price: 'Rs.2000.00', location: 'New York', name: '2018 Lexus' },
-        { image: 'cars/car-5.png', price: 'Rs.2000.00', location: 'Las Vegas', name: 'Rolls Royce Dawn' },
-        { image: 'cars/car-6.png', price: 'Rs.2000.00', location: 'New Jersey', name: 'Lamborghini Venemo' }
+        { image: 'cars/car-1.png', price: 'Rs.2000.00', location: 'IslamAbad', name: 'Mercedes-AMG GT R' },
+        { image: 'cars/car-2.png', price: 'Rs.2000.00', location: 'Lahore', name: 'BMW 428i - F32' },
+        { image: 'cars/car-3.png', price: 'Rs.2000.00', location: 'IslamAbad', name: 'Toyota 86 - Coupe' },
+        { image: 'cars/car-4.png', price: 'Rs.2000.00', location: 'Karachi', name: '2018 Lexus' },
+        { image: 'cars/car-5.png', price: 'Rs.2000.00', location: 'Lahore', name: 'Rolls Royce Dawn' },
+        { image: 'cars/car-6.png', price: 'Rs.2000.00', location: 'Karachi', name: 'Lamborghini Venemo' }
       ] %>
 
       <% cars.each do |car| %>
@@ -72,10 +72,7 @@
               </div>
             </div>
             <h2><%= car[:name] %></h2>
-            <button class="btn-2 btn-car" onclick="window.location.href='<%= contact_path %>'">
-              <span>Book Now</span>
-              <i class="fa-solid fa-phone"></i>
-            </button>
+          
           </div>
         </div>
       <% end %>

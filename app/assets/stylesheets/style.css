@@ -315,7 +315,7 @@ nav.sticky {
   }
   
 .collection h1 {
-    font-size: 64px;
+    font-size: 60px;
     font-weight: bold;
 }
 
@@ -329,7 +329,7 @@ nav.sticky {
 
 .collection-car-item {
     width: 390px;
-    height: 455px;
+    height: 400px;
     background-color: var(--gray);
     display: flex;
     flex-direction: column;
